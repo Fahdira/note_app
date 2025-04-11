@@ -22,7 +22,7 @@ jobs:
       run: |
         ssh -o StrictHostKeyChecking=no ubuntu@54.179.7.224 << 'EOF'
           cd /var/www/html/note_app
-          git pull origin main
+          sudo git pull origin main
           # Restart Nginx or any service needed
           sudo systemctl restart nginx
         EOF
